@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fuente Playfair Display para el estilo original -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
+    
+    <style>
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .display-4 {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+	  .hero-banner {
+  		background-image: url('foto-portada.jpg');
+  		background-size: cover;
+  		background-position: center;
+  		background-repeat: no-repeat;
+	    }
+    /* Ajuste de la barra contenedora redondeada y transparente */
+    .nav-custom-bar {
+      background-color: rgba(255, 255, 255, 0.08); /* Fondo translúcido */
+      backdrop-filter: blur(10px);                  /* Efecto difuminado */
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);  /* Borde tenue */
+      border-radius: 50px;                          /* Bordes redondeados */
+      height: auto;                                 /* Quita la altura fija desfasada */
+      overflow: hidden;
+      padding: 6px 16px;
+      }
+
+/* Centrado vertical exacto para el contenedor interno y los enlaces */
+    .nav-custom-bar .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;                          /* Centra verticalmente */
+      margin: 0;
+      padding: 0;                                   /* Elimina el desfase inferior */
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .nav-custom-bar .nav-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;                            /* Relleno uniforme arriba y abajo */
+      line-height: 1;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación de categorías -->
+    <div class="container my-3">
+      <div class="nav-scroller nav-custom-bar">
+        <nav class="nav nav-underline justify-content-between align-items-center px-3">
+          <a class="nav-item nav-link link-body-emphasis active" href="index.html">Inicio</a>
+          <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
+          <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
+          <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
+          <a class="nav-item nav-link link-body-emphasis" href="bootstrap.html">CSS y Bootstrap</a>
+          <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (Índice)</a>
+          <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
+        </nav>
+      </div>
+    </div>  
+
+    <!-- Tarjeta principal destacada -->
+<main class="container">
+  <div class="hero-banner p-4 p-md-5 mb-4 rounded text-white">
+    <div class="col-lg-6 px-0">
+      <h1 class="display-4 fst-italic">
+        Batallón Fantasma 404: La Masacre del Kernel Sangriento
+      </h1>
+      <p class="lead my-3">
+        Sobrevivimos en Vietnam en 1971 esquivando
+         el fuego pesado y un sin fin de lluvia de sangre, pero el 
+         verdadero lazo se forjó en una Trinchera cuando el comandante 
+         John Rambo nos ordenó compilar HTML en servilletas mientras nos
+          cubría con una M60. Hoy cambiamos los fusiles por contenedores Docker, listos para desplegar el servidor más blindado del frente.
+      </p>
+      <p class="lead mb-0">
+        <a href="integrantes.html" class="text-white fw-bold">Continuar leyendo...</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
