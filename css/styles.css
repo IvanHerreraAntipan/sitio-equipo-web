@@ -1,0 +1,54 @@
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .display-4 {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+	  .hero-banner {
+  		background-image: url('../img/foto-portada.jpg');
+  		background-size: cover;
+  		background-position: center;
+  		background-repeat: no-repeat;
+	    }
+    /* Ajuste de la barra contenedora redondeada y transparente */
+    .nav-custom-bar {
+      background-color: rgba(255, 255, 255, 0.08); /* Fondo translúcido */
+      backdrop-filter: blur(10px);                  /* Efecto difuminado */
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);  /* Borde tenue */
+      border-radius: 50px;                          /* Bordes redondeados */
+      height: auto;                                 /* Quita la altura fija desfasada */
+      overflow: hidden;
+      padding: 6px 16px;
+      }
+
+/* Centrado vertical exacto para el contenedor interno y los enlaces */
+    .nav-custom-bar .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;                          /* Centra verticalmente */
+      margin: 0;
+      padding: 0;                                   /* Elimina el desfase inferior */
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .nav-custom-bar .nav-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;                            /* Relleno uniforme arriba y abajo */
+      line-height: 1;
+    }
