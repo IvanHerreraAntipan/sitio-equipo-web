@@ -15,76 +15,95 @@
           <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
           <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
           <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
-          <a class="nav-item nav-link link-body-emphasis active" href="html-semantico.html">HTML y Semántica</a>
+          <a class="nav-item nav-link link-body-emphasis active" href="html-semantico.html">HTML Semántico</a>
           <a class="nav-item nav-link link-body-emphasis" href="bootstrap.html">CSS y Bootstrap</a>
-          <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (índice)</a>
+          <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación</a>
           <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
         </nav>
       </div>
     </div>
-    <br><br>
 
-    <main class="container mb-5">
-        <h1 class="display-4 fst-italic mb-4 border-bottom pb-2">Etiquetas Semánticas en HTML5</h1>
-        <p class="lead mb-4">El HTML semántico da significado a la estructura web en lugar de solo definir su presentación. Esto ayuda a los navegadores, motores de búsqueda y lectores de pantalla a entender mejor el contenido.</p>
+    <main class="container mb-5 mt-4">
+        <h1 class="display-4 fst-italic mb-4 border-bottom pb-2">Etiquetas Semánticas de HTML</h1>
+        <p class="lead">El HTML semántico permite que el código sea comprensible tanto para los desarrolladores como para los navegadores, definiendo claramente la estructura y propósito del contenido.</p>
 
-        <section class="mb-5">
-            <h3>Propósito de las etiquetas y su uso en nuestro sitio</h3>
-            <ul class="list-group list-group-flush bg-transparent">
-                <li class="list-group-item bg-transparent">
-                    <strong>&lt;header&gt;:</strong> Define la cabecera de una página o sección. Suele contener logos o títulos. <br>
-                    <em>Uso en el sitio:</em> Se utiliza indirectamente en la lógica de nuestra barra de navegación superior.
-                </li>
-                <li class="list-group-item bg-transparent">
-                    <strong>&lt;nav&gt;:</strong> Envuelve enlaces de navegación principales. <br>
-                    <em>Uso en el sitio:</em> Lo usamos en la barra `.nav-custom-bar` en todas las páginas para movernos por el sitio.
-                </li>
-                <li class="list-group-item bg-transparent">
-                    <strong>&lt;main&gt;:</strong> Define el contenido principal y único del documento. <br>
-                    <em>Uso en el sitio:</em> Envuelve todo el contenido central de nuestras páginas (ej. en <code>index.html</code> para la sección de portada).
-                </li>
-                <li class="list-group-item bg-transparent">
-                    <strong>&lt;section&gt;:</strong> Representa una sección genérica agrupada temáticamente. <br>
-                    <em>Uso en el sitio:</em> En la estructura individual de cada integrante para separar habilidades, proyectos, etc.
-                </li>
-                <li class="list-group-item bg-transparent">
-                    <strong>&lt;article&gt;:</strong> Contenido independiente y autónomo (como un post de blog). <br>
-                    <em>Uso en el sitio:</em> Visible en la <code>pagina.html</code> dentro de los ejemplos de texto ("From the Firehose").
-                </li>
-                <li class="list-group-item bg-transparent">
-                    <strong>&lt;aside&gt;:</strong> Contenido tangencial o lateral relacionado al contenido principal (barras laterales). <br>
-                    <em>Uso en el sitio:</em> Ideal para la sección lateral derecha de archivos de blog.
-                </li>
-                <li class="list-group-item bg-transparent">
-                    <strong>&lt;footer&gt;:</strong> Pie de página de un documento o sección. <br>
-                    <em>Uso en el sitio:</em> Se puede ver al final de plantillas base (ej. derechos reservados).
-                </li>
-            </ul>
+        <section class="mb-5 mt-4">
+            <h3>Propósito y aplicación en el sitio</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered mt-3">
+                    <thead>
+                        <tr class="table-info">
+                            <th>Etiqueta</th>
+                            <th>Propósito</th>
+                            <th>Uso en nuestro sitio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;header&gt;</code></td>
+                            <td>Define la cabecera de una página o sección, usualmente contiene navegación o logos.</td>
+                            <td>Utilizada en la plantilla base para envolver la sección superior de navegación.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;nav&gt;</code></td>
+                            <td>Define una sección de enlaces de navegación principales.</td>
+                            <td>Utilizada dentro del contenedor <code>.nav-custom-bar</code> para el menú superior de todas las páginas.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;main&gt;</code></td>
+                            <td>Especifica el contenido principal y único del documento.</td>
+                            <td>Envuelve el contenido central de esta y todas las páginas del proyecto.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;section&gt;</code></td>
+                            <td>Define una sección genérica agrupada por un tema.</td>
+                            <td>Utilizada en las páginas de perfiles individuales para dividir habilidades y proyectos.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;article&gt;</code></td>
+                            <td>Representa un contenido independiente y autónomo que tiene sentido por sí solo.</td>
+                            <td>Se utiliza en <code>pagina.html</code> para estructurar las entradas de texto simuladas.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;aside&gt;</code></td>
+                            <td>Contiene información tangencialmente relacionada con el contenido principal.</td>
+                            <td>Empleada en las barras laterales de la estructura base del blog para mostrar enlaces adicionales.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;footer&gt;</code></td>
+                            <td>Define el pie de página de un documento o sección.</td>
+                            <td>Ubicada al final de la página principal para mostrar los derechos de autor del equipo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section>
-            <h3 class="fst-italic">Ejemplo de código semántico</h3>
+            <h3 class="fst-italic">Ejemplo de código implementado</h3>
             <div class="bg-dark p-3 rounded border border-secondary">
-<pre class="text-light mb-0"><code>&lt;header&gt;
-    &lt;h1&gt;Título del Sitio&lt;/h1&gt;
+<pre class="text-light mb-0"><code>&lt;!-- Estructura semántica típica utilizada en nuestro proyecto --&gt;
+&lt;header&gt;
     &lt;nav&gt;
-        &lt;a href="index.html"&gt;Inicio&lt;/a&gt;
+        &lt;!-- Menú de navegación --&gt;
     &lt;/nav&gt;
 &lt;/header&gt;
+
 &lt;main&gt;
     &lt;section&gt;
-        &lt;h2&gt;Sección de Noticias&lt;/h2&gt;
+        &lt;h1&gt;Tema Principal&lt;/h1&gt;
         &lt;article&gt;
-            &lt;h3&gt;Noticia 1&lt;/h3&gt;
-            &lt;p&gt;Contenido de la noticia.&lt;/p&gt;
+            &lt;p&gt;Contenido específico y autónomo.&lt;/p&gt;
         &lt;/article&gt;
     &lt;/section&gt;
+    
     &lt;aside&gt;
-        &lt;p&gt;Enlaces relacionados.&lt;/p&gt;
+        &lt;!-- Enlaces o contenido secundario --&gt;
     &lt;/aside&gt;
 &lt;/main&gt;
+
 &lt;footer&gt;
-    &lt;p&gt;&amp;copy; 2026 Equipo&lt;/p&gt;
+    &lt;p&gt;&amp;copy; 2026 Batallón Fantasma 404&lt;/p&gt;
 &lt;/footer&gt;</code></pre>
             </div>
         </section>

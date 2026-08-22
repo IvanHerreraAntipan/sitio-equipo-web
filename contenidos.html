@@ -9,84 +9,82 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Barra de navegación -->
     <div class="container my-3">
       <div class="nav-scroller nav-custom-bar">
         <nav class="nav nav-underline justify-content-between align-items-center px-3">
           <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
           <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
           <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
-          <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
+          <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML Semántico</a>
           <a class="nav-item nav-link link-body-emphasis" href="bootstrap.html">CSS y Bootstrap</a>
-          <a class="nav-item nav-link link-body-emphasis active" href="contenidos.html">Investigación (índice)</a>
+          <a class="nav-item nav-link link-body-emphasis active" href="contenidos.html">Investigación</a>
           <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
         </nav>
       </div>
     </div>
-    <br><br>
 
-    <main class="container mb-5">
-        <h1 class="display-4 fst-italic mb-4 border-bottom pb-2">Índice de Investigación Temática</h1>
-        <p class="lead mb-5">Bienvenido a nuestra base de conocimientos. Aquí documentamos todo el aprendizaje adquirido durante el desarrollo del Laboratorio 01.</p>
+    <main class="container mb-5 mt-4">
+        <h1 class="display-4 fst-italic mb-4 border-bottom pb-2">Índice de Contenidos e Investigación</h1>
+        <p class="lead mb-5">En esta sección documentamos los resultados de nuestra investigación tecnológica, abarcando desde la estructura web hasta el despliegue de contenedores.</p>
         
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <!-- Docker -->
+            <!-- Tema 1 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h3 class="card-title">Docker: Instalación y Ejecución</h3>
-                        <p class="card-text">Docker es una plataforma que permite empaquetar y ejecutar aplicaciones en entornos aislados llamados contenedores. En esta sección detallamos su instalación en Windows.</p>
-                        <a href="docker-instalacion.html" class="btn btn-outline-light btn-sm">Ver investigación</a>
+                        <h3 class="card-title text-info">Docker</h3>
+                        <p class="card-text"><strong>Introducción:</strong> Plataforma para crear, desplegar y ejecutar aplicaciones en contenedores.<br><strong>Ejemplo:</strong> <code>docker run hello-world</code></p>
+                        <a href="docker-instalacion.html" class="btn btn-outline-light btn-sm">Ver instalación y pruebas</a>
                     </div>
                 </div>
             </div>
-            <!-- Comandos Docker -->
+            <!-- Tema 2 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h3 class="card-title">Comandos Docker</h3>
-                        <p class="card-text">Una guía de referencia rápida con los comandos más utilizados en Docker para crear imágenes, levantar contenedores y gestionar procesos.</p>
-                        <a href="docker-comandos.html" class="btn btn-outline-light btn-sm">Ver comandos</a>
+                        <h3 class="card-title text-info">Comandos Docker</h3>
+                        <p class="card-text"><strong>Introducción:</strong> Guía de la CLI de Docker para gestionar imágenes y contenedores.<br><strong>Ejemplos:</strong> <code>build</code>, <code>run</code>, <code>ps</code>, <code>stop</code>.</p>
+                        <a href="docker-comandos.html" class="btn btn-outline-light btn-sm">Ver comandos frecuentes</a>
                     </div>
                 </div>
             </div>
-            <!-- CSS -->
+            <!-- Tema 3 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h3 class="card-title">Hojas de Estilo (CSS)</h3>
-                        <p class="card-text">Investigación sobre Cascading Style Sheets (CSS), su importancia en la separación de estructura y presentación, y el modelo de caja.</p>
+                        <h3 class="card-title text-info">CSS</h3>
+                        <p class="card-text"><strong>Introducción:</strong> Lenguaje de diseño gráfico para definir la presentación de un documento estructurado.<br><strong>Ejemplo:</strong> Modelo de caja, colores, selectores.</p>
                         <a href="css.html" class="btn btn-outline-light btn-sm">Ver investigación CSS</a>
                     </div>
                 </div>
             </div>
-            <!-- Bootstrap -->
+            <!-- Tema 4 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h3 class="card-title">Framework Bootstrap</h3>
-                        <p class="card-text">Exploración de Bootstrap, el framework CSS líder para diseño responsivo. Analizamos su sistema de grillas y componentes reutilizables.</p>
-                        <a href="bootstrap.html" class="btn btn-outline-light btn-sm">Ver Bootstrap</a>
+                        <h3 class="card-title text-info">Bootstrap</h3>
+                        <p class="card-text"><strong>Introducción:</strong> Framework CSS y JS para el desarrollo rápido de sitios responsivos.<br><strong>Ejemplo:</strong> Sistema de grillas (<code>row</code>, <code>col</code>).</p>
+                        <a href="bootstrap.html" class="btn btn-outline-light btn-sm">Ver investigación Bootstrap</a>
                     </div>
                 </div>
             </div>
-            <!-- HTML Semántico -->
+            <!-- Tema 5 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h3 class="card-title">Etiquetas Semánticas de HTML</h3>
-                        <p class="card-text">Análisis de la estructura moderna de HTML5, incluyendo el uso correcto de etiquetas como header, main, section y article.</p>
-                        <a href="html-semantico.html" class="btn btn-outline-light btn-sm">Ver Semántica</a>
+                        <h3 class="card-title text-info">Etiquetas semánticas de HTML</h3>
+                        <p class="card-text"><strong>Introducción:</strong> Etiquetas que aportan significado estructural al contenido de la página web.<br><strong>Ejemplos:</strong> <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>.</p>
+                        <a href="html-semantico.html" class="btn btn-outline-light btn-sm">Ver etiquetas semánticas</a>
                     </div>
                 </div>
             </div>
-            <!-- Etiquetas Comunes -->
+            <!-- Tema 6 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h3 class="card-title">Etiquetas HTML de Uso Común</h3>
-                        <p class="card-text">Documentación y ejemplos prácticos de las etiquetas base de la web, desde párrafos y enlaces hasta listas, imágenes y formularios.</p>
-                        <a href="etiquetas-html.html" class="btn btn-outline-light btn-sm">Ver Etiquetas</a>
+                        <h3 class="card-title text-info">Etiquetas HTML de uso común</h3>
+                        <p class="card-text"><strong>Introducción:</strong> Elementos básicos para estructurar texto, multimedia y formularios.<br><strong>Ejemplos:</strong> <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>.</p>
+                        <a href="etiquetas-html.html" class="btn btn-outline-light btn-sm">Ver etiquetas comunes</a>
                     </div>
                 </div>
             </div>

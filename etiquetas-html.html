@@ -15,70 +15,68 @@
           <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
           <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
           <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
-          <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
+          <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML Semántico</a>
           <a class="nav-item nav-link link-body-emphasis" href="bootstrap.html">CSS y Bootstrap</a>
-          <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (índice)</a>
+          <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación</a>
           <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
         </nav>
       </div>
     </div>
-    <br><br>
 
-    <main class="container mb-5">
+    <main class="container mb-5 mt-4">
         <h1 class="display-4 fst-italic mb-4 border-bottom pb-2">Etiquetas HTML de Uso Común</h1>
         
         <div class="row g-4">
+            <!-- Textos y enlaces -->
             <div class="col-md-6">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h4 class="card-title text-info">&lt;h1&gt; a &lt;h6&gt; y &lt;p&gt;</h4>
-                        <p><strong>Uso:</strong> Los <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> definen encabezados jerárquicos. El <code>&lt;p&gt;</code> define un párrafo.</p>
-                        <p class="text-muted small"><em>En nuestro sitio:</em> Usamos <code>&lt;h1&gt;</code> para los títulos principales (como el de arriba) y <code>&lt;p&gt;</code> para descripciones largas.</p>
+                        <h4 class="card-title text-info text-decoration-underline">Texto y Enlaces</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li><strong>&lt;h1&gt; a &lt;h6&gt;:</strong> Definen títulos. Es apropiado usar <code>h1</code> para el título principal y los demás para subtítulos. <br><em>Ejemplo en el sitio:</em> <code>&lt;h1 class="display-4"&gt;</code> en la portada.</li>
+                            <li class="mt-2"><strong>&lt;p&gt;:</strong> Define párrafos de texto. Usar siempre para bloques de lectura. <br><em>Ejemplo en el sitio:</em> Descripciones de los integrantes.</li>
+                            <li class="mt-2"><strong>&lt;a&gt;:</strong> Crea hipervínculos. Apropiado para conectar páginas. <br><em>Ejemplo en el sitio:</em> <code>&lt;a href="index.html"&gt;</code> en el menú.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             
+            <!-- Multimedia y Listas -->
             <div class="col-md-6">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h4 class="card-title text-info">&lt;a&gt; e &lt;img&gt;</h4>
-                        <p><strong>Uso:</strong> <code>&lt;a&gt;</code> crea hipervínculos (links) hacia otras páginas. <code>&lt;img&gt;</code> inserta imágenes mediante el atributo <code>src</code>.</p>
-                        <p class="text-muted small"><em>En nuestro sitio:</em> Todos los botones de la barra de navegación son <code>&lt;a&gt;</code>. Las fotos en <code>integrantes.html</code> usan <code>&lt;img&gt;</code>.</p>
+                        <h4 class="card-title text-info text-decoration-underline">Multimedia y Listas</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li><strong>&lt;img&gt;:</strong> Inserta imágenes. Apropiado para recursos visuales estáticos. <br><em>Ejemplo en el sitio:</em> <code>&lt;img src="img/pjw.jpg"&gt;</code> en las tarjetas de perfil.</li>
+                            <li class="mt-2"><strong>&lt;ul&gt; y &lt;ol&gt;:</strong> Listas desordenadas (viñetas) y ordenadas (números). Usar para agrupar ítems relacionados.</li>
+                            <li class="mt-2"><strong>&lt;li&gt;:</strong> Define cada ítem de una lista. <br><em>Ejemplo en el sitio:</em> Usado en listas de habilidades tecnológicas.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
+            <!-- Contenedores -->
             <div class="col-md-6">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h4 class="card-title text-info">&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h4>
-                        <p><strong>Uso:</strong> <code>&lt;ul&gt;</code> crea listas desordenadas (viñetas), <code>&lt;ol&gt;</code> listas ordenadas (números) y <code>&lt;li&gt;</code> define cada elemento de la lista.</p>
-                        <p class="text-muted small"><em>En nuestro sitio:</em> Lo usamos al documentar habilidades de los integrantes o procesos paso a paso.</p>
+                        <h4 class="card-title text-info text-decoration-underline">Contenedores Estructurales</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li><strong>&lt;div&gt;:</strong> Contenedor genérico a nivel de bloque. Usar para agrupar elementos y aplicar estilos CSS o grillas. <br><em>Ejemplo en el sitio:</em> <code>&lt;div class="row"&gt;</code> de Bootstrap.</li>
+                            <li class="mt-2"><strong>&lt;span&gt;:</strong> Contenedor genérico en línea. Apropiado para dar estilo a una parte específica de un texto. <br><em>Ejemplo en el sitio:</em> Aplicar un color específico a una palabra clave.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
+            <!-- Tablas y Formularios -->
             <div class="col-md-6">
                 <div class="card h-100 shadow-sm border-secondary">
                     <div class="card-body">
-                        <h4 class="card-title text-info">&lt;div&gt; y &lt;span&gt;</h4>
-                        <p><strong>Uso:</strong> Contenedores genéricos. <code>&lt;div&gt;</code> es en bloque (ocupa toda la línea), <code>&lt;span&gt;</code> es en línea (para estilizar fragmentos pequeños).</p>
-                        <p class="text-muted small"><em>En nuestro sitio:</em> <code>&lt;div&gt;</code> envuelve casi todo en Bootstrap (ej. <code>&lt;div class="container"&gt;</code>).</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="card h-100 shadow-sm border-secondary">
-                    <div class="card-body">
-                        <h4 class="card-title text-info">&lt;table&gt;, &lt;form&gt;, &lt;label&gt;, &lt;input&gt;, &lt;button&gt;</h4>
-                        <p><strong>Uso:</strong> 
-                            <br>- <code>&lt;table&gt;</code> organiza datos tabulares en filas y celdas.
-                            <br>- <code>&lt;form&gt;</code> agrupa datos que el usuario envía. 
-                            <br>- <code>&lt;input&gt;</code> recibe el texto/datos, y <code>&lt;label&gt;</code> nombra esa entrada. 
-                            <br>- <code>&lt;button&gt;</code> ejecuta una acción o envía el formulario.
-                        </p>
-                        <p class="text-muted small"><em>En nuestro sitio:</em> Se pueden usar en páginas individuales de perfiles para que los visitantes "contacten" al integrante a través de un <code>&lt;form&gt;</code>.</p>
+                        <h4 class="card-title text-info text-decoration-underline">Tablas y Formularios</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li><strong>&lt;table&gt;:</strong> Muestra datos tabulares. <br><em>Ejemplo en el sitio:</em> Usado en la página "HTML semántico" para comparar etiquetas.</li>
+                            <li class="mt-2"><strong>&lt;form&gt;, &lt;label&gt;, &lt;input&gt;, &lt;button&gt;:</strong> Elementos para recibir datos del usuario. <code>form</code> agrupa, <code>label</code> describe, <code>input</code> recibe y <code>button</code> envía. <br><em>Ejemplo de aplicación:</em> Creados para una sección simulada de "Contacto" en los portafolios individuales.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
