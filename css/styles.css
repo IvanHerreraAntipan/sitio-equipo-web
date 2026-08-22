@@ -14,7 +14,7 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-      .display-4 {
+      .display-4, h1, h2,h3 {
         font-family: "Playfair Display", Georgia, "Times New Roman", serif;
       }
 	  .hero-banner {
