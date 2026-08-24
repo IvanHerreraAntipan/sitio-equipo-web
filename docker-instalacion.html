@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalar Docker</title>
+</head>
+<body>
+    <header>
+        <h1>Tutorial: Instalar Docker en Windows</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>¿Qué es Docker Desktop?</h2>
+            <p><strong>Docker Desktop</strong> es una aplicación para entornos Windows que permite crear, depurar y ejecutar aplicaciones contenedorizadas de manera local, integrando el motor de Docker y soporte para WSL 2.</p>
+            <h3>Requisitos básicos:</h3>
+            <ul>
+                <li><strong>Windows 10/11 de 64 bits con WSL 2.</strong></li>
+                <li><strong>Virtualización habilitada en el BIOS/UEFI.</strong></li>
+                <li><strong>Mínimo 4 GB de memoria RAM.</strong></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>1. Descargar Docker Desktop</h2>
+            <ul>
+                <li>
+                    <strong>Abrir el navegador y entrar a: </strong>
+                    <a href="https://www.docker.com/get-started/" target="_blank" rel="noopener noreferrer">Docker Desktop</a>
+                </li>
+                <li>
+                    <strong>Buscar el botón “Download Docker Desktop” y descargar el instalador para tu sistema operativo.</strong>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. Instalar Docker Desktop</h2>
+            <ul>
+                <li><strong>Ejecutar el instalador <code>Docker Desktop Installer.exe</code>.</strong></li>
+                <li><strong>En el asistente de instalación, aceptar los términos y mantener la opción por defecto de usar WSL 2 (si aparece).</strong></li>
+                <li><strong>Pulsar Next / Install hasta finalizar.</strong></li>
+                <li><strong>Al terminar, pulsar Close y reiniciar el equipo si el instalador lo solicita.</strong></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>3. Primer arranque y prueba rápida</h2>
+            <ol>
+                <li>
+                    <p><strong>Abrir Docker Desktop desde el menú Inicio y esperar hasta que el estado cambie a Running (ícono de la ballena activa en la bandeja del sistema).</strong></p>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <img src="img/inter_prueba.jpeg" alt="Estado de Docker en Running" width="600">
+                    </div>
+                </li>
+                <li>
+                    <p><strong>Abrir la Terminal o PowerShell y ejecutar el comando: <code>docker run hello-world</code></strong></p>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <img src="img/cmd_prueba.jpeg" alt="Prueba de comando docker run hello-world en consola" width="600">
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
