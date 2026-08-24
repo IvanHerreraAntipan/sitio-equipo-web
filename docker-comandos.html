@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Docker</title>
+</head>
+<body>
+    <header>
+        <h1>Tutorial: Primer contenedor web</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Paso a paso para crear y desplegar el contenedor</h2>
+            <ol>
+                <li>
+                    <p>Crear una carpeta de trabajo, por ejemplo: <code>C:\docker-lab-web</code>.</p>
+                </li>
+                
+                <li>
+                    <p>Dentro de esa carpeta, crear un archivo <code>index.html</code>.</p>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <img src="img/evidencia_2.png" alt="Estructura del archivo index.html" width="600">
+                    </div>
+                </li>
+                
+                <li>
+                    <p>En la misma carpeta, crear un archivo llamado <code>Dockerfile</code> (sin extensión) con la configuración para Nginx.</p>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <img src="img/comando_3.png" alt="Configuración del archivo Dockerfile" width="600">
+                    </div>
+                </li>
+
+                <li>
+                    <p>Construir la imagen: En PowerShell o CMD, entra a la carpeta del proyecto y ejecuta:</p>
+                    <p><code>docker build -t mi-web-html .</code></p>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <img src="img/evidencia_1.jpeg" alt="Construcción de la imagen en consola con docker build" width="600">
+                    </div>
+                    <p>Esto descargará la imagen base <code>nginx:alpine</code> (si no está localmente) y generará la imagen personalizada.</p>
+                </li>
+
+                <li>
+                    <p>Ejecutar el contenedor: Publica el puerto 80 del contenedor al puerto 8080 del host con el comando:</p>
+                    <p><code>docker run -d -p 8080:80 --name mi-web-container mi-web-html</code></p>
+                    <p>
+                        Abre el navegador en <a href="http://localhost:8080" target="_blank" rel="noopener noreferrer">http://localhost:8080</a> para ver la página servida desde el contenedor.
+                    </p>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <img src="img/evidencia_5.png" alt="Página web servida exitosamente desde Docker en localhost:8080" width="600">
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Demostración</h2>
+            <div style="text-align: center; margin: 20px 0;">
+                <iframe 
+                    src="https://drive.google.com/file/d/1kFMCqSUV3oMqaDHjAMc6tt_O0WMo9teV/preview" 
+                    width="640" 
+                    height="360" 
+                    style="border: none; border-radius: 8px; max-width: 100%;" 
+                    allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Comandos Principales de Docker</h2>
+            <ul>
+                <li>
+                    <p><code>docker --version</code>: Consultar la versión instalada de Docker.</p>
+                </li>
+                <li>
+                    <p><code>docker run hello-world</code>: Ejecutar una imagen de prueba básica.</p>
+                </li>
+                <li>
+                    <p><code>docker images</code>: Listar las imágenes locales descargadas o creadas.</p>
+                </li>
+                <li>
+                    <p><code>docker ps</code>: Mostrar los contenedores que están corriendo en este momento.</p>
+                </li>
+                <li>
+                    <p><code>docker ps -a</code>: Mostrar todos los contenedores (tanto activos como apagados).</p>
+                </li>
+                <li>
+                    <p><code>docker build</code>: Construir una imagen a partir de un archivo Dockerfile.</p>
+                </li>
+                <li>
+                    <p><code>docker run</code>: Crear y ejecutar un contenedor nuevo.</p>
+                </li>
+                <li>
+                    <p><code>docker stop</code>: Detener un contenedor que está en ejecución.</p>
+                </li>
+                <li>
+                    <p><code>docker start</code>: Iniciar un contenedor que estaba detenido.</p>
+                </li>
+                <li>
+                    <p><code>docker rm</code>: Eliminar un contenedor detenido.</p>
+                </li>
+                <li>
+                    <p><code>docker rmi</code>: Eliminar una imagen del sistema.</p>
+                </li>
+                <li>
+                    <p><code>docker logs</code>: Consultar los registros o salidas de consola de un contenedor.</p>
+                </li>
+                <li>
+                    <p><code>docker exec</code>: Ejecutar comandos dentro de un contenedor en ejecución.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
