@@ -7,6 +7,7 @@
     <title>Investigación: CSS · Batallón 404</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet">
     
     <style>
       .bd-placeholder-img {
@@ -124,19 +125,19 @@
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
       </symbol>
     </svg>
- <div class="container my-3">
-    <div class="nav-scroller nav-custom-bar">
-      <nav class="nav nav-underline justify-content-between align-items-center px-3">
-        <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
-        <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
-        <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
-        <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
-        <a class="nav-item nav-link link-body-emphasis active" href="bootstrap.html">CSS y Bootstrap</a>
-        <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (Índice)</a>
-        <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
-      </nav>
+
+    <!-- Barra de navegación estandarizada -->
+    <div class="container my-3">
+      <div class="nav-scroller nav-custom-bar">
+        <nav class="nav nav-underline justify-content-between align-items-center px-3">
+          <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
+          <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
+          <a class="nav-item nav-link link-body-emphasis active" href="contenidos.html">Investigación</a>
+          <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
+        </nav>
+      </div>
     </div>
-  </div>
+
     <main class="container">
       
       <div class="p-4 p-md-5 mb-4 rounded text-white bg-dark hero-banner">
@@ -155,40 +156,40 @@
 
       <div class="row mb-2">
         <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
+          <div class="row g-0 border border-secondary rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
             <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary-emphasis">Diseño</strong>
+              <strong class="d-inline-block mb-2 text-info">Estructura</strong>
               <h3 class="mb-0">HTML Semántico</h3>
               <div class="mb-1 text-body-secondary">Fase 1</div>
               <p class="card-text mb-auto">
                 Comprende cómo estructurar correctamente el contenido antes de aplicar cualquier tipo de estilo CSS.
               </p>
-              <a href="html-semantico.html" class="icon-link gap-1 icon-link-hover stretched-link">
+              <a href="html-semantico.html" class="icon-link gap-1 icon-link-hover stretched-link text-info">
                 Continuar leyendo
                 <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
               </a>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">HTML</text></svg>
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#343a40"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">HTML</text></svg>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
+          <div class="row g-0 border border-secondary rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
             <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-success-emphasis">Frameworks</strong>
+              <strong class="d-inline-block mb-2 text-primary">Frameworks</strong>
               <h3 class="mb-0">Bootstrap 5</h3>
               <div class="mb-1 text-body-secondary">Fase 3</div>
               <p class="mb-auto">
                 Una vez dominado CSS, descubre cómo este framework acelera el desarrollo con componentes preconstruidos.
               </p>
-              <a href="bootstrap.html" class="icon-link gap-1 icon-link-hover stretched-link">
+              <a href="bootstrap.html" class="icon-link gap-1 icon-link-hover stretched-link text-primary">
                 Continuar leyendo
                 <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
               </a>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">BS5</text></svg>
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#343a40"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">BS5</text></svg>
             </div>
           </div>
         </div>
@@ -196,24 +197,24 @@
 
       <div class="row g-5">
         <div class="col-md-8">
-          <h3 class="pb-4 mb-4 fst-italic border-bottom">Investigación Principal</h3>
+          <h3 class="pb-4 mb-4 fst-italic border-bottom border-secondary">Investigación Principal</h3>
           
           <article class="blog-post">
             <h2 class="display-5 link-body-emphasis mb-1">Entendiendo CSS a fondo</h2>
-            <p class="blog-post-meta">
-              Marzo de 2026 por <a href="integrantes.html">Batallón Fantasma 404</a>
+            <p class="blog-post-meta text-secondary">
+              Marzo de 2026 por <a href="integrantes.html" class="text-info">Batallón Fantasma 404</a>
             </p>
             <p>
               <strong>CSS</strong> son las siglas de <em>Cascading Style Sheets</em> (Hojas de Estilo en Cascada). Es un lenguaje de diseño gráfico que utilizamos estrictamente para definir y crear la presentación de un documento estructurado escrito en HTML.
             </p>
-            <hr />
+            <hr class="border-secondary" />
             <p>
               Imagina que estás construyendo una casa. El HTML serían los ladrillos, las vigas y las paredes: definen la estructura básica y dónde va cada habitación. Sin embargo, una casa solo de ladrillos es funcional pero poco atractiva. Aquí es donde entra CSS, actuando como la pintura, los muebles y la decoración.
             </p>
             <h2>La Separación de Poderes</h2>
             <p>En los inicios de internet, esto era un caos. El estándar moderno exige una separación de responsabilidades:</p>
-            <blockquote class="blockquote">
-              <p>"La ventaja principal de CSS es que nos permite separar el contenido de su apariencia, haciendo el código mucho más limpio, ordenado y fácil de mantener."</p>
+            <blockquote class="blockquote border-start border-info border-3 px-3">
+              <p class="fst-italic">"La ventaja principal de CSS es que nos permite separar el contenido de su apariencia, haciendo el código mucho más limpio, ordenado y fácil de mantener."</p>
             </blockquote>
             <p>
               Si defines que todos los párrafos de tu página sean azules, y luego, más abajo en tu código, indicas que un párrafo específico sea rojo, la regla más específica (o la última en declararse) "aplastará" a la anterior. Por eso se llama <strong>en cascada</strong>.
@@ -252,10 +253,10 @@
             </ul>
           </article>
 
-          <article class="blog-post">
+          <article class="blog-post mt-5">
             <h2 class="display-5 link-body-emphasis mb-1">Comparativa de Lenguajes</h2>
-            <p class="blog-post-meta">
-              Sección de <a href="#">Apoyo Técnico</a>
+            <p class="blog-post-meta text-secondary">
+              Sección de <a href="#" class="text-info">Apoyo Técnico</a>
             </p>
             <p>
               Para entender el lugar que ocupa CSS en el ecosistema web, es útil compararlo directamente con sus tecnologías hermanas.
@@ -263,12 +264,12 @@
             
             <h3>Tabla Comparativa Frontend</h3>
             <p>Aquí vemos cómo se dividen las tareas en el navegador:</p>
-            <table class="table">
+            <table class="table table-dark table-striped table-bordered border-secondary mt-3">
               <thead>
                 <tr>
-                  <th>Lenguaje</th>
-                  <th>Propósito Principal</th>
-                  <th>Analogía</th>
+                  <th class="text-info">Lenguaje</th>
+                  <th class="text-info">Propósito Principal</th>
+                  <th class="text-info">Analogía</th>
                 </tr>
               </thead>
               <tbody>
@@ -298,62 +299,62 @@
             </table>
           </article>
 
-          <nav class="blog-pagination" aria-label="Pagination">
-            <a class="btn btn-outline-primary rounded-pill" href="#">Siguiente tema</a>
-            <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Anterior</a>
+          <nav class="blog-pagination my-4" aria-label="Pagination">
+            <a class="btn btn-outline-info rounded-pill" href="bootstrap.html">Siguiente (Bootstrap)</a>
+            <a class="btn btn-outline-secondary rounded-pill" href="html-semantico.html">Anterior (HTML)</a>
           </nav>
         </div>
 
         <div class="col-md-4">
           <div class="position-sticky" style="top: 2rem">
             
-            <div class="p-4 mb-3 bg-body-tertiary rounded">
-              <h4 class="fst-italic">Sobre este módulo</h4>
+            <div class="p-4 mb-4 bg-body-tertiary border border-secondary rounded shadow-sm">
+              <h4 class="fst-italic text-info">Sobre este módulo</h4>
               <p class="mb-0">
                 Esta página contiene la documentación de investigación técnica. Utiliza este espacio para añadir notas importantes sobre hojas de estilo, selectores y metodologías de diseño.
               </p>
             </div>
             
-            <div>
-              <h4 class="fst-italic">Investigaciones Recientes</h4>
+            <div class="mb-4">
+              <h4 class="fst-italic border-bottom border-secondary pb-2">Investigaciones Recientes</h4>
               <ul class="list-unstyled">
                 <li>
-                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-bottom border-secondary" href="docker-instalacion.html">
                     <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=100&h=96&fit=crop" class="rounded" alt="Docker" width="100" height="96" style="opacity: 0.7;">
-                    <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></svg>
                     <div class="col-lg-8">
-                      <h6 class="mb-0">Docker: Contenedores paso a paso</h6>
-                      <small class="text-body-secondary">Enero 15, 2024</small>
+                      <h6 class="mb-0">Docker: Instalación y Pruebas</h6>
+                      <small class="text-body-secondary">Despliegue</small>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                    <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-bottom border-secondary" href="docker-comandos.html">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=100&h=96&fit=crop" class="rounded" alt="Docker" width="100" height="96" style="opacity: 0.7;">
                     <div class="col-lg-8">
-                      <h6 class="mb-0">Nginx como proxy inverso</h6>
-                      <small class="text-body-secondary">Enero 14, 2024</small>
+                      <h6 class="mb-0">Docker: Comandos Frecuentes</h6>
+                      <small class="text-body-secondary">Administración</small>
                     </div>
                   </a>
                 </li>
               </ul>
             </div>
             
-            <div class="p-4">
-              <h4 class="fst-italic">Fases del Proyecto</h4>
+            <div class="p-4 bg-body-tertiary border border-secondary rounded mb-4 shadow-sm">
+              <h4 class="fst-italic text-info">Fases del Proyecto</h4>
               <ol class="list-unstyled mb-0">
-                <li><a href="#">Fase 1: Planificación</a></li>
-                <li><a href="#">Fase 2: HTML/CSS</a></li>
-                <li><a href="#">Fase 3: Bootstrap</a></li>
-                <li><a href="#">Fase 4: Docker & Nginx</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">1. Planificación</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">2. HTML/CSS</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">3. Bootstrap</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">4. Docker & Nginx</a></li>
               </ol>
             </div>
             
-            <div class="p-4">
-              <h4 class="fst-italic">Enlaces</h4>
-              <ol class="list-unstyled">
-                <li><a href="#">Repositorio GitHub</a></li>
-                <li><a href="#">Jira (Tablero)</a></li>
+            <div class="p-4 bg-body-tertiary border border-secondary rounded shadow-sm">
+              <h4 class="fst-italic text-info">Enlaces</h4>
+              <ol class="list-unstyled mb-0">
+                <li class="mb-2"><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" class="text-info text-decoration-none">» Doc. MDN CSS</a></li>
+                <li class="mb-2"><a href="#" class="text-info text-decoration-none">» Repositorio GitHub</a></li>
+                <li><a href="#" class="text-info text-decoration-none">» Jira (Tablero)</a></li>
               </ol>
             </div>
           </div>
@@ -361,11 +362,11 @@
       </div>
     </main>
 
-    <footer class="py-5 text-center text-body-secondary bg-body-tertiary mt-5">
-      <p>
-        Plantilla de Blog adaptada para <a href="#">Batallón Fantasma 404</a>.
+    <footer class="py-5 text-center text-body-secondary bg-body-tertiary mt-5 border-top border-secondary">
+      <p class="text-light">
+        Investigación CSS adaptada para <a href="index.html" class="text-info">Batallón Fantasma 404</a>.
       </p>
-      <p class="mb-0"><a href="#">Volver arriba</a></p>
+      <p class="mb-0"><a href="#" class="text-secondary">Volver arriba</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
