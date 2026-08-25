@@ -6,28 +6,28 @@
     <title>Perfil - Francisco López</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/NA.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div class="container">
-      <div class="nav-scroller py-1 mb-3 mt-3 nav-custom-bar border-0">
-        <nav class="nav nav-underline justify-content-between">
-          <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
-          <a class="nav-item nav-link link-body-emphasis active" href="integrantes.html">Equipo/integrantes</a>
-          <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
-          <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
-          <a class="nav-item nav-link link-body-emphasis" href="bootstrap.html">CSS y Bootstrap</a>
-          <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (Índice)</a>
-          <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
+    <!-- Barra de navegación -->
+    <div class="container my-3">
+      <div class="nav-scroller nav-custom-bar">
+        <nav class="nav nav-underline justify-content-between align-items-center px-3">
+          <a class="nav-item nav-link link-body-emphasis" href="../index.html">Inicio</a>
+          <a class="nav-item nav-link link-body-emphasis active" href="../integrantes.html">Equipo/integrantes</a>
+          <a class="nav-item nav-link link-body-emphasis" href="../docker-nginx.html">Docker y Nginx</a>
+          <a class="nav-item nav-link link-body-emphasis" href="../html-semantico.html">HTML y Semántica</a>
+          <a class="nav-item nav-link link-body-emphasis" href="../bootstrap.html">CSS y Bootstrap</a>
+          <a class="nav-item nav-link link-body-emphasis" href="../contenidos.html">Investigación (Índice)</a>
+          <a class="nav-item nav-link link-body-emphasis" href="../reflexion.html">Reflexión</a>
         </nav>
       </div>
     </div>  
 
     <main class="container">
-            <div class="hero-banner p-4 p-md-5 mb-4 rounded text-white shadow">
+      <div class="hero-banner p-4 p-md-5 mb-4 rounded text-white shadow">
         <div class="row align-items-center">
           <div class="col-lg-8 px-0">
-            <p class="text-uppercase text-secondary fw-bold mb-1"></p>
             <h1 class="display-4 fst-italic mb-3">Francisco Javier López Silva</h1>
             <p class="lead my-3">
               Estudiante de tercer año de Ingeniería Civil en Informática en la Universidad Autónoma de Chile.
@@ -37,13 +37,13 @@
             </p>
           </div>
           <div class="col-lg-4 text-center mt-4 mt-lg-0">
-            <img src="img/Avatar-FL.jpg" alt="Avatar de Francisco López" class="avatar-profile shadow-lg" style="width: 250px; height: auto;">
+            <img src="../img/flopez.jpg" alt="Avatar de Francisco López" class="img-fluid rounded shadow-lg" style="max-width: 220px;">
           </div>
         </div>
       </div>
+
       <div class="row g-4 mb-5">
-        
-        <div class="col-md-6">
+        <div class="col-md-5">
           <div class="p-4 rounded border border-secondary border-opacity-25 bg-dark h-100 shadow-sm">
             <h3 class="titulo-seccion fst-italic border-bottom border-secondary pb-3 mb-4">Competencias Técnicas</h3>
             
@@ -55,30 +55,47 @@
 
             <h5 class="text-info">Gestión de bases de datos:</h5>
             <ul class="mb-4">
-              <li>PostgreSQL utilizando pgAdmin4</li>
+              <li>PostgreSQL (pgAdmin4)</li>
             </ul>
 
             <h5 class="text-info">Herramientas complementarias:</h5>
             <ul>
-              <li>GitHub</li>
+              <li>Git / GitHub</li>
               <li>Jira</li>
+              <li>Docker / Nginx</li>
             </ul>
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-7">
           <div class="p-4 rounded border border-secondary border-opacity-25 bg-dark h-100 shadow-sm">
-            <h3 class="titulo-seccion fst-italic border-bottom border-secondary pb-3 mb-4">Proyectos Realizados</h3>
-            <p class="fs-5 mt-3 text-secondary">
-              Sin proyectos relevantes aún. 
-              <br>
-              <em class="text-light">(Preparando código para futuros despliegues...)</em>
-            </p>
+            <h3 class="titulo-seccion fst-italic border-bottom border-secondary pb-3 mb-4">Portafolio de Proyectos</h3>
+            
+            <!-- Proyecto 1 -->
+            <div class="card bg-secondary bg-opacity-10 border border-secondary mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-info">Sistema de Gestión Académica</h5>
+                <span class="badge bg-success mb-2">Finalizado</span>
+                <p class="card-text mb-1"><strong>Propósito:</strong> Aplicación de escritorio para la administración de notas y asistencia estudiantil.</p>
+                <p class="card-text mb-1"><strong>Tecnologías:</strong> Java, PostgreSQL.</p>
+                <p class="card-text mb-0"><strong>Características:</strong> Autenticación de usuarios, consultas CRUD y generación de reportes.</p>
+              </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="card bg-secondary bg-opacity-10 border border-secondary">
+              <div class="card-body">
+                <h5 class="card-title text-info">Landing Page y Despliegue en Docker</h5>
+                <span class="badge bg-warning text-dark mb-2">En desarrollo</span>
+                <p class="card-text mb-1"><strong>Propósito:</strong> Sitio web informativo del equipo desplegado en un contenedor Nginx.</p>
+                <p class="card-text mb-1"><strong>Tecnologías:</strong> HTML5, CSS3, Bootstrap 5, Docker.</p>
+                <p class="card-text mb-0"><strong>Características:</strong> Diseño responsivo, semántica web y empaquetamiento de servidor web.</p>
+              </div>
+            </div>
+
           </div>
         </div>
-
       </div>
-
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
