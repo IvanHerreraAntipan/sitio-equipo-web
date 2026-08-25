@@ -8,6 +8,7 @@
     <title>Investigación: Bootstrap · Batallón 404</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet">
     
     <style>
       .bd-placeholder-img {
@@ -162,19 +163,18 @@
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
       </symbol>
     </svg>
-<div class="container my-3">
-    <div class="nav-scroller nav-custom-bar">
-      <nav class="nav nav-underline justify-content-between align-items-center px-3">
-        <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
-        <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
-        <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
-        <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
-        <a class="nav-item nav-link link-body-emphasis active" href="bootstrap.html">CSS y Bootstrap</a>
-        <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (Índice)</a>
-        <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
-      </nav>
+
+    <!-- Barra de navegación estandarizada -->
+    <div class="container my-3">
+      <div class="nav-scroller nav-custom-bar">
+        <nav class="nav nav-underline justify-content-between align-items-center px-3">
+          <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
+          <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
+          <a class="nav-item nav-link link-body-emphasis active" href="contenidos.html">Investigación</a>
+          <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
+        </nav>
+      </div>
     </div>
-  </div>
 
     <main class="container">
       <div class="p-4 p-md-5 mb-4 rounded text-white hero-banner shadow">
@@ -186,8 +186,36 @@
             Descubre por qué Bootstrap es el framework CSS y JS más popular del mundo. Aprende a crear sitios web responsivos y "mobile-first" de forma rápida y estructurada.
           </p>
           <p class="lead mb-0">
-            <a href="#" class="text-info fw-bold">Continuar leyendo...</a>
+            <a href="#investigacion" class="text-info fw-bold">Continuar leyendo...</a>
           </p>
+        </div>
+      </div>
+
+      <!-- Módulos de enlace a investigación de Docker -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-6">
+          <div class="card h-100 card-gris border-secondary shadow-sm p-3">
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-info text-dark mb-2 align-self-start">Despliegue & Entornos</span>
+              <h3 class="card-title text-white">Instalación y Pruebas de Docker</h3>
+              <p class="card-text text-light flex-grow-1">
+                Guía paso a paso sobre el proceso de instalación del motor Docker, configuración de entorno y ejecución del contenedor de prueba <code>hello-world</code>.
+              </p>
+              <a href="docker-instalacion.html" class="btn btn-outline-info mt-3">Ver Instalación y Pruebas →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 card-gris border-secondary shadow-sm p-3">
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-primary mb-2 align-self-start">CLI & Administración</span>
+              <h3 class="card-title text-white">Comandos Frecuentes de Docker</h3>
+              <p class="card-text text-light flex-grow-1">
+                Compendio de comandos indispensables de la CLI de Docker para gestionar imágenes, contenedores, redes y puertos de red vinculados a Nginx.
+              </p>
+              <a href="docker-comandos.html" class="btn btn-outline-primary mt-3">Ver Comandos Frecuentes →</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -232,7 +260,7 @@
         </div>
       </div>
 
-      <div class="row g-5">
+      <div class="row g-5" id="investigacion">
         <div class="col-md-8 text-light">
           <h3 class="pb-4 mb-4 fst-italic border-bottom border-secondary text-white">Investigación Principal</h3>
           
@@ -352,7 +380,7 @@
           </article>
           
           <nav class="blog-pagination" aria-label="Pagination">
-            <a class="btn btn-outline-info rounded-pill" href="#">Siguiente (Docker)</a>
+            <a class="btn btn-outline-info rounded-pill" href="docker-nginx.html">Siguiente (Docker)</a>
             <a class="btn btn-outline-secondary rounded-pill" href="html-semantico.html">Anterior (HTML)</a>
           </nav>
         </div>
@@ -370,16 +398,25 @@
               <h4 class="fst-italic text-white">Investigaciones Recientes</h4>
               <ul class="list-unstyled">
                 <li>
-                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top border-secondary" href="#">
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top border-secondary" href="docker-instalacion.html">
                     <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=100&h=96&fit=crop" class="rounded" alt="Docker" width="100" height="96" style="opacity: 0.7;">
                     <div class="col-lg-8 text-light">
-                      <h6 class="mb-0">Docker: Contenedores paso a paso</h6>
-                      <small class="text-secondary">Fase 4</small>
+                      <h6 class="mb-0">Docker: Instalación y Pruebas</h6>
+                      <small class="text-secondary">Despliegue</small>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top border-secondary" href="#">
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top border-secondary" href="docker-comandos.html">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=100&h=96&fit=crop" class="rounded" alt="Docker" width="100" height="96" style="opacity: 0.7;">
+                    <div class="col-lg-8 text-light">
+                      <h6 class="mb-0">Docker: Comandos CLI</h6>
+                      <small class="text-secondary">Administración</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top border-secondary" href="html-semantico.html">
                     <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=100&h=96&fit=crop" class="rounded" alt="HTML" width="100" height="96" style="opacity: 0.7;">
                     <div class="col-lg-8 text-light">
                       <h6 class="mb-0">Introducción a HTML Semántico</h6>
@@ -422,6 +459,6 @@
       <p class="mb-0"><a href="#" class="text-secondary">Volver arriba</a></p>
     </footer>
     
-    <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
