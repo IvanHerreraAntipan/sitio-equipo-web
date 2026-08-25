@@ -1,72 +1,313 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instalar Docker</title>
-</head>
-<body>
-    <header>
-        <h1>Tutorial: Instalar Docker en Windows</h1>
-    </header>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Guía paso a paso para instalar Docker Desktop en Windows" />
+    <meta name="author" content="Batallón Fantasma 404" />
+    <title>Instalación: Docker Desktop · Batallón 404</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet" />
 
-    <main>
-        <section>
-            <h2>¿Qué es Docker Desktop?</h2>
-            <p><strong>Docker Desktop</strong> es una aplicación para entornos Windows que permite crear, depurar y ejecutar aplicaciones contenedorizadas de manera local, integrando el motor de Docker y soporte para WSL 2.</p>
-            <h3>Requisitos básicos:</h3>
-            <ul>
-                <li><strong>Windows 10/11 de 64 bits.</strong></li>
-                <li><strong>Mínimo 4 GB de memoria RAM.</strong></li>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em #0000001a, inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      body {
+        background-color: #212529;
+        color: #e9ecef;
+      }
+
+      .display-4, .display-5, h1, h2, h3, h4, h5, h6, .blog-header-logo {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+
+      .hero-banner {
+        background-color: #1a1d20;
+        background-image: url('https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=2070&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
+      }
+
+      .nav-custom-bar {
+        background-color: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 50px;
+        height: auto;
+        overflow: hidden;
+        padding: 6px 16px;
+      }
+
+      .nav-custom-bar .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .nav-custom-bar .nav-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 14px;
+        line-height: 1;
+      }
+
+      .card-gris, .sidebar-bloque {
+        background-color: #1a1d20 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-outline-info py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Cambiar tema</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg> Claro
+            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg> Oscuro
+            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg> Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container my-3">
+      <div class="nav-scroller nav-custom-bar">
+        <nav class="nav nav-underline justify-content-between align-items-center px-3">
+          <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
+          <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
+          <a class="nav-item nav-link link-body-emphasis active" href="docker-instalacion.html">Instalación Docker</a>
+          <a class="nav-item nav-link link-body-emphasis" href="docker-comandos.html">Docker y Nginx</a>
+          <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
+          <a class="nav-item nav-link link-body-emphasis" href="bootstrap.html">CSS y Bootstrap</a>
+          <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (Índice)</a>
+          <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-white hero-banner shadow">
+        <div class="col-lg-7 px-0">
+          <h1 class="display-4 fst-italic">
+            Tutorial: Instalar Docker Desktop en Windows
+          </h1>
+          <p class="lead my-3">
+            Aprende a preparar los requisitos de virtualización WSL 2, descargar el instalador y ejecutar tu primer contenedor de prueba con Docker Desktop.
+          </p>
+          <p class="lead mb-0">
+            <a href="#instalacion" class="text-info fw-bold text-decoration-none">Comenzar instalación ↓</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-8 text-light" id="instalacion">
+          
+          <article class="blog-post">
+            <h2 class="display-5 text-white mb-1">¿Qué es Docker Desktop?</h2>
+            <p class="blog-post-meta text-secondary border-bottom border-secondary pb-3">
+              Fase de entorno por <a href="#" class="text-info">Batallón Fantasma 404</a>
+            </p>
+            <p>
+              <strong>Docker Desktop</strong> es una aplicación para entornos Windows que permite crear, depurar y ejecutar aplicaciones contenedorizadas de manera local, integrando el motor de Docker y soporte para WSL 2.
+            </p>
+
+            <div class="card card-gris p-4 my-4 shadow-sm">
+              <h4 class="text-info mb-3">Requisitos básicos del sistema:</h4>
+              <ul class="mb-0">
+                <li class="mb-2"><strong>Windows 10/11 de 64 bits con WSL 2.</strong></li>
+                <li class="mb-2"><strong>Virtualización habilitada en el BIOS/UEFI.</strong></li>
+                <li class="mb-0"><strong>Mínimo 4 GB de memoria RAM.</strong></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="blog-post mt-5">
+            <h2 class="display-5 text-white mb-3">1. Descargar Docker Desktop</h2>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item bg-transparent text-light border-secondary py-2">
+                <strong>Abrir el navegador y acceder al portal oficial: </strong>
+                <a href="https://www.docker.com/get-started/" target="_blank" rel="noopener noreferrer" class="text-info fw-bold">Docker Desktop Official</a>
+              </li>
+              <li class="list-group-item bg-transparent text-light border-secondary py-2">
+                <strong>Buscar el botón “Download Docker Desktop” y descargar el instalador para Windows.</strong>
+              </li>
             </ul>
-        </section>
+          </article>
 
-        <hr>
-
-        <section>
-            <h2>1. Descargar Docker Desktop</h2>
-            <ul>
-                <li>
-                    <strong>Abrir el navegador y entrar a: </strong>
-                    <a href="https://www.docker.com/get-started/" target="_blank" rel="noopener noreferrer">Docker Desktop</a>
-                </li>
-                <li>
-                    <strong>Buscar el botón “Download Docker Desktop” y descargar el instalador para tu sistema operativo.</strong>
-                </li>
+          <article class="blog-post mt-5">
+            <h2 class="display-5 text-white mb-3">2. Instalar Docker Desktop</h2>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item bg-transparent text-light border-secondary py-2">
+                <strong>Ejecutar el archivo instalador: </strong><code>Docker Desktop Installer.exe</code>.
+              </li>
+              <li class="list-group-item bg-transparent text-light border-secondary py-2">
+                <strong>En el asistente de instalación, aceptar los términos y mantener la opción por defecto de usar WSL 2.</strong>
+              </li>
+              <li class="list-group-item bg-transparent text-light border-secondary py-2">
+                <strong>Pulsar Next / Install hasta finalizar el proceso.</strong>
+              </li>
+              <li class="list-group-item bg-transparent text-light border-secondary py-2">
+                <strong>Al terminar, pulsar Close y reiniciar el equipo si el instalador lo solicita.</strong>
+              </li>
             </ul>
-        </section>
+          </article>
 
-        <hr>
+          <article class="blog-post mt-5">
+            <h2 class="display-5 text-white mb-3">3. Primer arranque y prueba rápida</h2>
+            <ol class="list-group list-group-numbered list-group-flush mb-4">
+              <li class="list-group-item bg-transparent text-light border-secondary py-3">
+                <strong class="text-white">Abrir Docker Desktop desde el menú Inicio y esperar hasta que el estado cambie a Running (ícono de la ballena activo en la bandeja del sistema).</strong>
+                <div class="text-center my-3">
+                  <img src="img/inter_prueba.jpeg" alt="Estado de Docker en Running" class="img-fluid rounded border border-secondary shadow-sm" style="max-width: 100%;">
+                </div>
+              </li>
 
-        <section>
-            <h2>2. Instalar Docker Desktop</h2>
-            <ul>
-                <li><strong>Ejecutar el instalador <code>Docker Desktop Installer.exe</code>.</strong></li>
-                <li><strong>En el asistente de instalación, aceptar los términos y mantener la opción por defecto de usar WSL 2 (si aparece).</strong></li>
-                <li><strong>Pulsar Next / Install hasta finalizar.</strong></li>
-                <li><strong>Al terminar, pulsar Close y reiniciar el equipo si el instalador lo solicita.</strong></li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>3. Primer arranque y prueba rápida</h2>
-            <ol>
-                <li>
-                    <p><strong>Abrir Docker Desktop desde el menú Inicio y esperar hasta que el estado cambie a Running (ícono de la ballena activa en la bandeja del sistema).</strong></p>
-                    <div style="text-align: center; margin: 15px 0;">
-                        <img src="img/inter_prueba.jpeg" alt="Estado de Docker en Running" width="600">
-                    </div>
-                </li>
-                <li>
-                    <p><strong>Abrir la Terminal o PowerShell y ejecutar el comando: <code>docker run hello-world</code></strong></p>
-                    <div style="text-align: center; margin: 15px 0;">
-                        <img src="img/cmd_prueba.jpeg" alt="Prueba de comando docker run hello-world en consola" width="600">
-                    </div>
-                </li>
+              <li class="list-group-item bg-transparent text-light border-secondary py-3">
+                <strong class="text-white">Abrir la Terminal o PowerShell y ejecutar el comando de verificación:</strong>
+                <pre class="bg-dark p-3 rounded border border-secondary text-info my-2"><code>docker run hello-world</code></pre>
+                <div class="text-center my-3">
+                  <img src="img/cmd_prueba.jpeg" alt="Prueba de comando docker run hello-world en consola" class="img-fluid rounded border border-secondary shadow-sm" style="max-width: 100%;">
+                </div>
+              </li>
             </ol>
-        </section>
+          </article>
+
+          <nav class="blog-pagination my-4" aria-label="Pagination">
+            <a class="btn btn-outline-info rounded-pill" href="docker-comandos.html">Siguiente (Despliegue y Comandos)</a>
+            <a class="btn btn-outline-secondary rounded-pill" href="html-semantico.html">Anterior (HTML)</a>
+          </nav>
+        </div>
+
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem">
+            
+            <div class="p-4 mb-4 rounded card-gris shadow-sm text-light">
+              <h4 class="fst-italic text-info">Sobre este módulo</h4>
+              <p class="mb-0">
+                La instalación adecuada de Docker Desktop junto con WSL 2 es el paso previo necesario para poder construir imágenes personalizadas y desplegar servicios web locales.
+              </p>
+            </div>
+
+            <div class="p-4 card-gris rounded mb-4 shadow-sm text-light">
+              <h4 class="fst-italic text-info">Fases del Proyecto</h4>
+              <ol class="list-unstyled mb-0">
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">1. Planificación</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">2. Desarrollo HTML/CSS</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">3. Integración Bootstrap</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">4. Despliegue Docker</a></li>
+              </ol>
+            </div>
+
+            <div class="p-4 card-gris rounded shadow-sm text-light">
+              <h4 class="fst-italic text-info">Enlaces Oficiales</h4>
+              <ol class="list-unstyled mb-0">
+                <li class="mb-2"><a href="https://docs.docker.com/desktop/install/windows-install/" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-none">» Guía Windows en Docker Docs</a></li>
+                <li class="mb-2"><a href="https://learn.microsoft.com/es-es/windows/wsl/install" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-none">» Instalación de WSL 2 (Microsoft)</a></li>
+                <li><a href="#" class="text-info text-decoration-none">» Repositorio del Proyecto</a></li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+
+    <footer class="py-5 text-center bg-dark mt-5 border-top border-secondary">
+      <p class="text-light">
+        Investigación Frontend adaptada para 
+        <a href="index.html" class="text-info">Batallón Fantasma 404</a>.
+      </p>
+      <p class="mb-0"><a href="#" class="text-secondary">Volver arriba</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
