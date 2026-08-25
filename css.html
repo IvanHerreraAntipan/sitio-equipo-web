@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Investigación sobre CSS" />
+    <title>Investigación: CSS · Batallón 404</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet" />
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em #0000001a, inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      .display-4, .display-5, h1, h2, h3, h4, h5, h6, .blog-header-logo {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+      
+      .hero-banner {
+        background-image: url('https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=2070&auto=format&fit=crop'); 
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7); 
+      }
+
+      .nav-custom-bar {
+        background-color: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 50px;
+        height: auto;
+        overflow: hidden;
+        padding: 6px 16px;
+      }
+
+      .nav-custom-bar .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .nav-custom-bar .nav-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 14px;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+      <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+      </symbol>
+    </svg>
+ <div class="container my-3">
+    <div class="nav-scroller nav-custom-bar">
+      <nav class="nav nav-underline justify-content-between align-items-center px-3">
+        <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
+        <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
+        <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
+        <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
+        <a class="nav-item nav-link link-body-emphasis active" href="bootstrap.html">CSS y Bootstrap</a>
+        <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (Índice)</a>
+        <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
+      </nav>
+    </div>
+  </div>
+    <main class="container">
+      
+      <div class="p-4 p-md-5 mb-4 rounded text-white bg-dark hero-banner">
+        <div class="col-lg-6 px-0">
+          <h1 class="display-4 fst-italic">
+            El arte de dar estilo: ¿Qué es CSS?
+          </h1>
+          <p class="lead my-3">
+            Si HTML es el esqueleto de una página web, CSS es su piel, su ropa y su maquillaje. Descubre cómo las hojas de estilo transforman texto plano en experiencias visuales.
+          </p>
+          <p class="lead mb-0">
+            <a href="#" class="text-white fw-bold">Continuar leyendo...</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Diseño</strong>
+              <h3 class="mb-0">HTML Semántico</h3>
+              <div class="mb-1 text-body-secondary">Fase 1</div>
+              <p class="card-text mb-auto">
+                Comprende cómo estructurar correctamente el contenido antes de aplicar cualquier tipo de estilo CSS.
+              </p>
+              <a href="html-semantico.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                Continuar leyendo
+                <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">HTML</text></svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success-emphasis">Frameworks</strong>
+              <h3 class="mb-0">Bootstrap 5</h3>
+              <div class="mb-1 text-body-secondary">Fase 3</div>
+              <p class="mb-auto">
+                Una vez dominado CSS, descubre cómo este framework acelera el desarrollo con componentes preconstruidos.
+              </p>
+              <a href="bootstrap.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                Continuar leyendo
+                <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">BS5</text></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-8">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">Investigación Principal</h3>
+          
+          <article class="blog-post">
+            <h2 class="display-5 link-body-emphasis mb-1">Entendiendo CSS a fondo</h2>
+            <p class="blog-post-meta">
+              Marzo de 2026 por <a href="integrantes.html">Batallón Fantasma 404</a>
+            </p>
+            <p>
+              <strong>CSS</strong> son las siglas de <em>Cascading Style Sheets</em> (Hojas de Estilo en Cascada). Es un lenguaje de diseño gráfico que utilizamos estrictamente para definir y crear la presentación de un documento estructurado escrito en HTML.
+            </p>
+            <hr />
+            <p>
+              Imagina que estás construyendo una casa. El HTML serían los ladrillos, las vigas y las paredes: definen la estructura básica y dónde va cada habitación. Sin embargo, una casa solo de ladrillos es funcional pero poco atractiva. Aquí es donde entra CSS, actuando como la pintura, los muebles y la decoración.
+            </p>
+            <h2>La Separación de Poderes</h2>
+            <p>En los inicios de internet, esto era un caos. El estándar moderno exige una separación de responsabilidades:</p>
+            <blockquote class="blockquote">
+              <p>"La ventaja principal de CSS es que nos permite separar el contenido de su apariencia, haciendo el código mucho más limpio, ordenado y fácil de mantener."</p>
+            </blockquote>
+            <p>
+              Si defines que todos los párrafos de tu página sean azules, y luego, más abajo en tu código, indicas que un párrafo específico sea rojo, la regla más específica (o la última en declararse) "aplastará" a la anterior. Por eso se llama <strong>en cascada</strong>.
+            </p>
+            
+            <h3>¿Qué podemos hacer con CSS?</h3>
+            <p>
+              Las capacidades de las hojas de estilo modernas van mucho más allá de simplemente cambiar el color del texto. Algunas de las cosas que podemos lograr incluyen:
+            </p>
+            <ul>
+              <li>Definir la paleta de colores de un sitio completo.</li>
+              <li>Crear diseños responsivos (adaptables a móviles).</li>
+              <li>Agregar animaciones complejas y transiciones suaves.</li>
+            </ul>
+            <p>Conceptos clave a investigar (Lista ordenada):</p>
+            <ol>
+              <li>Selectores y Especificidad.</li>
+              <li>El Modelo de Caja (Box Model).</li>
+              <li>Flexbox y CSS Grid.</li>
+            </ol>
+            
+            <h2>Elementos Inline y Estilos</h2>
+            <p>
+              Es importante recordar cómo HTML y CSS interactúan con los elementos de línea. Por ejemplo:
+            </p>
+            <ul>
+              <li>
+                <strong>Negritas</strong> con la etiqueta <code>&lt;strong&gt;</code>.
+              </li>
+              <li>
+                <em>Cursivas</em> usando <code>&lt;em&gt;</code>.
+              </li>
+              <li>
+                Texto <del>eliminado</del> o <ins>insertado</ins> para mostrar revisiones.
+              </li>
+            </ul>
+          </article>
+
+          <article class="blog-post">
+            <h2 class="display-5 link-body-emphasis mb-1">Comparativa de Lenguajes</h2>
+            <p class="blog-post-meta">
+              Sección de <a href="#">Apoyo Técnico</a>
+            </p>
+            <p>
+              Para entender el lugar que ocupa CSS en el ecosistema web, es útil compararlo directamente con sus tecnologías hermanas.
+            </p>
+            
+            <h3>Tabla Comparativa Frontend</h3>
+            <p>Aquí vemos cómo se dividen las tareas en el navegador:</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Lenguaje</th>
+                  <th>Propósito Principal</th>
+                  <th>Analogía</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HTML</td>
+                  <td>Estructura y Semántica</td>
+                  <td>Los huesos</td>
+                </tr>
+                <tr>
+                  <td>CSS</td>
+                  <td>Presentación y Diseño</td>
+                  <td>La piel / Ropa</td>
+                </tr>
+                <tr>
+                  <td>JavaScript</td>
+                  <td>Interactividad y Lógica</td>
+                  <td>Los músculos / Cerebro</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td><strong>Stack Base</strong></td>
+                  <td><strong>Forman el Frontend</strong></td>
+                  <td><strong>Esenciales</strong></td>
+                </tr>
+              </tfoot>
+            </table>
+          </article>
+
+          <nav class="blog-pagination" aria-label="Pagination">
+            <a class="btn btn-outline-primary rounded-pill" href="#">Siguiente tema</a>
+            <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Anterior</a>
+          </nav>
+        </div>
+
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem">
+            
+            <div class="p-4 mb-3 bg-body-tertiary rounded">
+              <h4 class="fst-italic">Sobre este módulo</h4>
+              <p class="mb-0">
+                Esta página contiene la documentación de investigación técnica. Utiliza este espacio para añadir notas importantes sobre hojas de estilo, selectores y metodologías de diseño.
+              </p>
+            </div>
+            
+            <div>
+              <h4 class="fst-italic">Investigaciones Recientes</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=100&h=96&fit=crop" class="rounded" alt="Docker" width="100" height="96" style="opacity: 0.7;">
+                    <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">Docker: Contenedores paso a paso</h6>
+                      <small class="text-body-secondary">Enero 15, 2024</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">Nginx como proxy inverso</h6>
+                      <small class="text-body-secondary">Enero 14, 2024</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="p-4">
+              <h4 class="fst-italic">Fases del Proyecto</h4>
+              <ol class="list-unstyled mb-0">
+                <li><a href="#">Fase 1: Planificación</a></li>
+                <li><a href="#">Fase 2: HTML/CSS</a></li>
+                <li><a href="#">Fase 3: Bootstrap</a></li>
+                <li><a href="#">Fase 4: Docker & Nginx</a></li>
+              </ol>
+            </div>
+            
+            <div class="p-4">
+              <h4 class="fst-italic">Enlaces</h4>
+              <ol class="list-unstyled">
+                <li><a href="#">Repositorio GitHub</a></li>
+                <li><a href="#">Jira (Tablero)</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-5 text-center text-body-secondary bg-body-tertiary mt-5">
+      <p>
+        Plantilla de Blog adaptada para <a href="#">Batallón Fantasma 404</a>.
+      </p>
+      <p class="mb-0"><a href="#">Volver arriba</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

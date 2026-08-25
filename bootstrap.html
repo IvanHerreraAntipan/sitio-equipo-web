@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Guía completa sobre Bootstrap" />
+    <meta name="author" content="Batallón Fantasma 404" />
+    <title>Investigación: Bootstrap · Batallón 404</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet" />
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em #0000001a, inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      body {
+        background-color: #212529; 
+        color: #e9ecef;
+      }
+
+      .display-4, .display-5, h1, h2, h3, h4, h5, h6, .blog-header-logo {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+      
+      .hero-banner {
+        background-color: #1a1d20;
+        background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop'); 
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75); 
+      }
+
+      .nav-custom-bar {
+        background-color: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 50px;
+        height: auto;
+        overflow: hidden;
+        padding: 6px 16px;
+      }
+
+      .nav-custom-bar .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .nav-custom-bar .nav-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 14px;
+        line-height: 1;
+      }
+
+      .card-gris, .sidebar-bloque {
+        background-color: #1a1d20 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg> Light
+            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg> Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg> Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+      </symbol>
+    </svg>
+<div class="container my-3">
+    <div class="nav-scroller nav-custom-bar">
+      <nav class="nav nav-underline justify-content-between align-items-center px-3">
+        <a class="nav-item nav-link link-body-emphasis" href="index.html">Inicio</a>
+        <a class="nav-item nav-link link-body-emphasis" href="integrantes.html">Equipo/integrantes</a>
+        <a class="nav-item nav-link link-body-emphasis" href="docker-nginx.html">Docker y Nginx</a>
+        <a class="nav-item nav-link link-body-emphasis" href="html-semantico.html">HTML y Semántica</a>
+        <a class="nav-item nav-link link-body-emphasis active" href="bootstrap.html">CSS y Bootstrap</a>
+        <a class="nav-item nav-link link-body-emphasis" href="contenidos.html">Investigación (Índice)</a>
+        <a class="nav-item nav-link link-body-emphasis" href="reflexion.html">Reflexión</a>
+      </nav>
+    </div>
+  </div>
+
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-white hero-banner shadow">
+        <div class="col-lg-6 px-0">
+          <h1 class="display-4 fst-italic">
+            Guía Completa sobre Bootstrap
+          </h1>
+          <p class="lead my-3">
+            Descubre por qué Bootstrap es el framework CSS y JS más popular del mundo. Aprende a crear sitios web responsivos y "mobile-first" de forma rápida y estructurada.
+          </p>
+          <p class="lead mb-0">
+            <a href="#" class="text-info fw-bold">Continuar leyendo...</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card-gris">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-info">Diseño</strong>
+              <h3 class="mb-0 text-white">Sistema Grid</h3>
+              <div class="mb-1 text-secondary">Cuadrícula</div>
+              <p class="card-text mb-auto text-light">
+                Basado en Flexbox, el sistema de 12 columnas te permite maquetar cualquier estructura para todos los dispositivos.
+              </p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link text-info">
+                Ver documentación
+                <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=200&h=250&fit=crop" alt="Grid" class="bd-placeholder-img" width="200" height="250" style="object-fit: cover; opacity: 0.7;">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card-gris">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Interactividad</strong>
+              <h3 class="mb-0 text-white">Componentes UI</h3>
+              <div class="mb-1 text-secondary">Pre-diseñados</div>
+              <p class="mb-auto text-light">
+                Botones, barras de navegación, modales y alertas listos para usar con solo agregar clases a tu HTML.
+              </p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link text-info">
+                Ver ejemplos
+                <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=200&h=250&fit=crop" alt="UI Components" class="bd-placeholder-img" width="200" height="250" style="object-fit: cover; opacity: 0.7;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-8 text-light">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom border-secondary text-white">Investigación Principal</h3>
+          
+          <article class="blog-post">
+            <h2 class="display-5 text-white mb-1">¿Qué es Bootstrap?</h2>
+            <p class="blog-post-meta text-secondary">
+              Marzo de 2026 por <a href="#" class="text-info">Batallón Fantasma 404</a>
+            </p>
+            <p>
+              <strong>Bootstrap</strong> es un framework de desarrollo frontend de código abierto creado originalmente por diseñadores y desarrolladores de Twitter. Su objetivo principal es facilitar y acelerar la creación de sitios web y aplicaciones web.
+            </p>
+            <hr class="border-secondary" />
+            <p>
+              Imagina tener que escribir desde cero el CSS para cada botón, formulario o menú en cada proyecto. Bootstrap soluciona esto proporcionando una inmensa colección de fragmentos de código pre-escritos en CSS, y complementos en JavaScript, que puedes aplicar directamente en tu HTML mediante el uso de clases.
+            </p>
+            <h2 class="text-white">Enfoque Mobile-First</h2>
+            <p>El estándar actual de internet exige que las páginas se vean perfectas en teléfonos celulares. Bootstrap fue uno de los pioneros en este enfoque:</p>
+            <blockquote class="blockquote px-3 border-start border-info border-3">
+              <p class="text-light fst-italic">"Mobile-first significa que la arquitectura base está diseñada primero para pantallas pequeñas (móviles), y a medida que la pantalla crece, se añaden estilos adicionales para tablets o computadoras."</p>
+            </blockquote>
+            
+            <p>
+              Esto garantiza que el sitio web sea <strong>completamente responsivo</strong> y ofrezca una experiencia de usuario impecable sin importar el dispositivo que lo visite.
+            </p>
+            
+            <h3 class="text-white">¿Qué incluye el Framework?</h3>
+            <p>
+              Al descargar o enlazar Bootstrap a tu proyecto, obtienes acceso inmediato a una serie de herramientas fundamentales:
+            </p>
+            <ul>
+              <li><strong>Scaffolding:</strong> Estilos base globales para tipografía, enlaces y reseteo de márgenes.</li>
+              <li><strong>Grid System:</strong> Un potente sistema de 12 columnas basado en Flexbox para alinear contenido.</li>
+              <li><strong>Componentes:</strong> Elementos de interfaz (UI) interactivos como menús desplegables (dropdowns), alertas y carruseles.</li>
+            </ul>
+            <p>Además, incluye utilidades rápidas (Listas ordenadas):</p>
+            <ol>
+              <li>Clases de espaciado (márgenes y paddings como <code>m-3</code> o <code>p-4</code>).</li>
+              <li>Clases de colores de texto y fondos.</li>
+              <li>Clases de visualización (para ocultar o mostrar contenido según la pantalla).</li>
+            </ol>
+            
+            <h2 class="text-white">Elementos Inline con Clases</h2>
+            <p>
+              A diferencia del CSS tradicional donde debes crear tus propias reglas, en Bootstrap el diseño se aplica añadiendo clases directamente a las etiquetas HTML nativas.
+            </p>
+            <ul>
+              <li>
+                <strong>Para dar estilo a un botón</strong>, usamos
+                <code class="text-info bg-dark px-1 rounded">&lt;button class="btn btn-primary"&gt;</code>.
+              </li>
+              <li>
+                <em>Para alertas de color</em>, usamos
+                <code class="text-info bg-dark px-1 rounded">class="text-danger"</code> o <code class="text-info bg-dark px-1 rounded">class="text-success"</code>.
+              </li>
+            </ul>
+          </article>
+          
+          <article class="blog-post mt-5">
+            <h2 class="display-5 text-white mb-1">Ventajas de su Uso</h2>
+            <p class="blog-post-meta text-secondary">
+              Sección de <a href="#" class="text-info">Análisis y Comparativa</a>
+            </p>
+            <p>
+              Elegir Bootstrap para un proyecto no es casualidad. Su masiva adopción en la industria del desarrollo web se debe a varios beneficios tangibles que impactan directamente en los tiempos de entrega.
+            </p>
+            <blockquote class="blockquote px-3 border-start border-info border-3">
+              <p class="text-light fst-italic">
+                Una de sus mayores ventajas es la <strong>consistencia</strong>. Si varios desarrolladores trabajan en el mismo proyecto, Bootstrap asegura que todos usen la misma convención de clases.
+              </p>
+            </blockquote>
+            
+            <h3 class="text-white mt-4">Comparativa: Con y Sin Bootstrap</h3>
+            <p>Analicemos la diferencia al implementar elementos comunes:</p>
+            <table class="table table-dark table-striped table-bordered border-secondary mt-3">
+              <thead>
+                <tr>
+                  <th class="text-info">Elemento / Tarea</th>
+                  <th class="text-info">Desarrollo CSS Puro</th>
+                  <th class="text-info">Con Bootstrap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Crear una cuadrícula (Grid)</td>
+                  <td>Requiere declarar Flexbox, % de anchos y Media Queries.</td>
+                  <td>Solo añadir <code>class="row"</code> y <code>class="col"</code>.</td>
+                </tr>
+                <tr>
+                  <td>Botón principal</td>
+                  <td>Definir padding, bordes, color, hover y transiciones (15+ líneas).</td>
+                  <td>Añadir <code>class="btn btn-primary"</code> (1 línea).</td>
+                </tr>
+                <tr>
+                  <td>Menú responsivo</td>
+                  <td>Requiere CSS complejo y escribir JavaScript manual.</td>
+                  <td>Copiar componente "Navbar" que ya incluye JS.</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          
+          <article class="blog-post mt-5">
+            <h2 class="display-5 text-white mb-1">El Sistema de Rejilla (Grid)</h2>
+            <p class="blog-post-meta text-secondary">
+              Marzo de 2026 por <a href="#" class="text-info">Equipo 404</a>
+            </p>
+            <p>
+              El corazón de Bootstrap es su sistema de rejilla. Divide la pantalla en 12 columnas invisibles. Para posicionar tus elementos, simplemente les dices cuántas columnas deben ocupar.
+            </p>
+            <pre class="bg-dark p-3 rounded border border-secondary text-light"><code>&lt;div class="row"&gt;
+  &lt;div class="col-md-8"&gt;Ocupa 8 columnas en PC&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;Ocupa 4 columnas en PC&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <p class="mt-3">
+              Este simple concepto permite crear maquetas complejas en cuestión de minutos que funcionarán a la perfección desde un iPhone hasta un monitor 4K.
+            </p>
+          </article>
+          
+          <nav class="blog-pagination" aria-label="Pagination">
+            <a class="btn btn-outline-info rounded-pill" href="#">Siguiente (Docker)</a>
+            <a class="btn btn-outline-secondary rounded-pill" href="html-semantico.html">Anterior (HTML)</a>
+          </nav>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem">
+            <div class="p-4 mb-4 rounded card-gris shadow-sm text-light">
+              <h4 class="fst-italic text-info">Sobre este módulo</h4>
+              <p class="mb-0">
+                Esta sección está dedicada al framework que acelerará nuestro desarrollo frontend. El conocimiento adquirido aquí será utilizado para maquetar todo el sitio final antes de subirlo a nuestros contenedores.
+              </p>
+            </div>
+            
+            <div class="mb-4">
+              <h4 class="fst-italic text-white">Investigaciones Recientes</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top border-secondary" href="#">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=100&h=96&fit=crop" class="rounded" alt="Docker" width="100" height="96" style="opacity: 0.7;">
+                    <div class="col-lg-8 text-light">
+                      <h6 class="mb-0">Docker: Contenedores paso a paso</h6>
+                      <small class="text-secondary">Fase 4</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top border-secondary" href="#">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=100&h=96&fit=crop" class="rounded" alt="HTML" width="100" height="96" style="opacity: 0.7;">
+                    <div class="col-lg-8 text-light">
+                      <h6 class="mb-0">Introducción a HTML Semántico</h6>
+                      <small class="text-secondary">Fase 1</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="p-4 card-gris rounded mb-4 shadow-sm text-light">
+              <h4 class="fst-italic text-info">Fases del Proyecto</h4>
+              <ol class="list-unstyled mb-0">
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">1. Planificación</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">2. Desarrollo HTML/CSS</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">3. Integración Bootstrap</a></li>
+                <li class="mb-1"><a href="#" class="text-light text-decoration-none border-bottom border-secondary pb-1 d-block">4. Despliegue Docker</a></li>
+              </ol>
+            </div>
+            
+            <div class="p-4 card-gris rounded shadow-sm text-light">
+              <h4 class="fst-italic text-info">Enlaces</h4>
+              <ol class="list-unstyled mb-0">
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/" target="_blank" class="text-info text-decoration-none">» Doc. Oficial BS5</a></li>
+                <li class="mb-2"><a href="#" class="text-info text-decoration-none">» Repositorio GitHub</a></li>
+                <li><a href="#" class="text-info text-decoration-none">» Jira (Tablero)</a></li>
+              </ol>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-5 text-center bg-dark mt-5 border-top border-secondary">
+      <p class="text-light">
+        Investigación Frontend adaptada para 
+        <a href="index.html" class="text-info">Batallón Fantasma 404</a>.
+      </p>
+      <p class="mb-0"><a href="#" class="text-secondary">Volver arriba</a></p>
+    </footer>
+    
+    <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  </body>
+</html>
