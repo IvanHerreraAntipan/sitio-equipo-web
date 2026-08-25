@@ -1,0 +1,7 @@
+Nombre del Equipo: Batallón Fantasma 404
+Integrantes y Roles:
+1. Iván Herrera - Scrum Master / Identidad Visual / docker-ngnix / reflexión
+2. Nicolas Christian Adasme Perez - Bootstrap/css
+3. Matías Benjamín Catalán Moreno - Identidad Visual / Index / Integrantes
+4. Francisco Javier López Silva - html-semántico / etiquetas-HTML / contenidos
+5. Luis Antonio Núñez Cayulef - Docker-instalación / docker-comandos
