@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil - Matías Catalán · Batallón 404</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-
     <!-- Barra de navegación estandarizada -->
     <div class="container my-3">
       <div class="nav-scroller nav-custom-bar">
@@ -22,84 +21,102 @@
       </div>
     </div>  
 
-    <main class="container my-4">
-      <div class="row g-5">
-        <div class="col-md-8">
-          <h3 class="pb-4 mb-4 fst-italic border-bottom border-secondary">Integrante</h3>
-          <article>
-            <h2 class="display-5 link-body-emphasis" style="margin-bottom: 1.25rem;">Matías Benjamín Catalán Moreno</h2>
-            <img src="../img/mcatalan.png" alt="Avatar" title="Avatar" width="200px" class="rounded shadow-sm mb-3">
-            <p class="text-info fw-bold">Rol en el equipo: Página de integrantes, identidad visual.</p>
-            <hr class="border-secondary">
-            <p>Programador con pasión a la programación a bajo nivel, sea Arduino, C, o assembler. Pero también suficientemente flexible para programar en ambientes más OOP o en lenguajes interpretados.</p>
-            <p>También me interesa un poco el hardware, mayormente el hardware antiguo ya que posee más documentación pública.</p>
-            <hr class="border-secondary">
-            <div class="row">
-              <div class="col-sm-6">
-                <h3 class="fst-italic text-info">Competencias</h3>
-                <ul>
-                  <li>Experiencia con lenguajes de programación C, C++, GLSL, Java, C#, Lua y Python.</li>
-                  <li>Experiencia con DBMS: PostgreSQL y MariaDB.</li>
-                  <li>Experiencia con tecnologías complementarias: Git, Perforce (P4V), Bootstrap, Nginx.</li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <h3 class="fst-italic text-info">Intereses</h3>
-                <ul>
-                  <li>Programación a bajo nivel</li>
-                  <li>ESP8266</li>
-                  <li>Hardware Antiguo</li>
-                  <li>Gatos</li>
-                  <li>Gamedev</li>
-                </ul>
-              </div>
-            </div>
-          </article>
+    <main class="container">
+      <!-- Hero Banner del Perfil -->
+      <div class="hero-banner p-4 p-md-5 mb-4 rounded text-white shadow">
+        <div class="row align-items-center">
+          <div class="col-lg-8 px-0">
+            <p class="text-uppercase text-info fw-bold mb-1">Identidad Visual / Frontend & Documentación</p>
+            <h1 class="display-4 fst-italic mb-3">Matías Benjamín Catalán Moreno</h1>
+            <p class="lead my-3">
+              Programador con profunda pasión por el <strong>desarrollo a bajo nivel</strong> (Arduino, C, Assembler), manteniendo a la vez flexibilidad técnica para entornos orientados a objetos (OOP) y lenguajes interpretados.
+            </p>
+            <p class="lead mb-0 text-secondary">
+              Interesado en la arquitectura de hardware antiguo por su amplia documentación pública y en la optimización estética y técnica en Batallón Fantasma 404.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center mt-4 mt-lg-0">
+            <img src="../img/mcatalan.jpg" alt="Foto de Matías Catalán" class="img-fluid rounded-circle shadow-lg border border-secondary" style="width: 220px; height: 220px; object-fit: cover;" onerror="this.src='../img/mcatalan.png'">
+          </div>
+        </div>
+      </div>
+
+      <!-- Secciones de Información -->
+      <div class="row g-4 mb-5">
+        <!-- Competencias e Intereses -->
+        <div class="col-md-6">
+          <div class="p-4 rounded border border-secondary border-opacity-25 bg-dark h-100 shadow-sm">
+            <h3 class="titulo-seccion fst-italic border-bottom border-secondary pb-3 mb-4 text-white">Competencias y Habilidades</h3>
+            
+            <h5 class="text-info mt-3">Lenguajes de Programación:</h5>
+            <ul class="mb-4">
+              <li>C / C++</li>
+              <li>Assembler (M68000, Z80)</li>
+              <li>GLSL, Java, C#, Lua y Python</li>
+            </ul>
+
+            <h5 class="text-info">Gestión de Bases de Datos (DBMS):</h5>
+            <ul class="mb-4">
+              <li>PostgreSQL y MariaDB</li>
+            </ul>
+
+            <h5 class="text-info">Herramientas y Tecnologías:</h5>
+            <ul class="mb-4">
+              <li>Git, Perforce (P4V), Bootstrap 5, Nginx</li>
+            </ul>
+
+            <h5 class="text-info">Áreas de Interés:</h5>
+            <ul class="mb-0">
+              <li>Programación a bajo nivel y microcontroladores ESP8266.</li>
+              <li>Hardware clásico / Retrocomputing y Game Development.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="position-sticky" style="top: 2rem;">
-            <h3 class="fst-italic border-bottom border-secondary pb-2 mb-3">Proyectos</h3>
+        <!-- Proyectos Destacados -->
+        <div class="col-md-6">
+          <div class="p-4 rounded border border-secondary border-opacity-25 bg-dark h-100 shadow-sm">
+            <h3 class="titulo-seccion fst-italic border-bottom border-secondary pb-3 mb-4 text-white">Proyectos Destacados</h3>
             
-            <div class="card shadow-sm border-secondary mb-4 bg-dark">
-              <img src="../img/mcatalan-sprpack.png" alt="sprpack" class="card-img-top" onerror="this.src='https://placehold.co/400x200?text=sprpack'">
-              <div class="card-body">
-                <div class="card-text">
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h4 class="card-title text-info mb-0">sprpack</h4>
-                    <span class="badge bg-success">Terminado</span>
-                  </div>
-                  <p class="text-light">Un simple binpacker escrito en Python con PIL para uso personal.</p>
-                  <ul class="text-body-secondary small mb-0">
-                    <li>Resuelve el problema de bin packing de imágenes.</li>
-                    <li>Flexible y fácilmente editable.</li>
-                  </ul>
-                </div>
+            <!-- Proyecto 1 -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="text-info mb-0">1. sprpack</h5>
+                <span class="badge bg-success">Terminado</span>
               </div>
+              <p class="text-secondary mb-2 small"><strong>Tipo:</strong> Binpacker de Imágenes / Utilidad Gráfica</p>
+              <p class="text-light mb-2">
+                Herramienta de empaquetado 2D (binpacker) desarrollada en Python con la biblioteca PIL para uso personal. Diseñada para resolver de manera flexible y eficiente la distribución óptima de hojas de sprites (sprite packing).
+              </p>
+              <ul class="text-secondary small mb-0">
+                <li>Resuelve algoritmos de bin packing de imágenes.</li>
+                <li>Estructura modular, portable y fácilmente configurable.</li>
+              </ul>
             </div>
 
-            <div class="card shadow-sm border-secondary mb-4 bg-dark">
-              <img src="../img/mcatalan-peow.webp" alt="peow" class="card-img-top" onerror="this.src='https://placehold.co/400x200?text=peow'">
-              <div class="card-body">
-                <div class="card-text">
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h4 class="card-title text-info mb-0">peow</h4>
-                    <span class="badge bg-warning text-dark">En desarrollo</span>
-                  </div>
-                  <p class="text-light">Proyecto de ocio, videojuego escrito en ensamblador de M68000 y Z80 (Target Sega Megadrive) con la intención de intentar aprender programación a más bajo nivel, todavía en progreso.</p>
-                  <ul class="text-body-secondary small mb-0">
-                    <li>Escrito en ensamblador desde cero.</li>
-                    <li>Funciona en hardware real.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <hr class="border-secondary my-3">
 
-            <div class="text-center mt-3">
-              <a href="../integrantes.html" class="btn btn-outline-secondary btn-sm w-100">← Volver al Equipo</a>
+            <!-- Proyecto 2 -->
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="text-info mb-0">2. peow</h5>
+                <span class="badge bg-warning text-dark">En desarrollo</span>
+              </div>
+              <p class="text-secondary mb-2 small"><strong>Tipo:</strong> Videojuego Retro / Ensamblador Bare-metal</p>
+              <p class="text-light mb-2">
+                Videojuego escrito desde cero en lenguaje ensamblador para los microprocesadores Motorola 68000 y Zilog Z80, enfocado como plataforma de destino la consola clásica Sega Mega Drive / Genesis.
+              </p>
+              <ul class="text-secondary small mb-0">
+                <li>Código en ensamblador puro sin capas de abstracción pesadas.</li>
+                <li>Validado y funcional en hardware real y emuladores de ciclo exacto.</li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="text-center mb-5">
+        <a href="../integrantes.html" class="btn btn-outline-secondary">← Volver al Equipo</a>
       </div>
     </main>
 
